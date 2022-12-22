@@ -5,8 +5,8 @@
     <servers>
         <server>
             <id>github</id>
-            <username>${{ secrets.DEPLOY_GITHUB_USERNAME }}</username>
-            <password>${{ secrets.DEPLOY_GITHUB_TOKEN }}</password>
+            <username>${{ env.GITHUB_USERNAME }}</username>
+            <password>${{ env.GITHUB_TOKEN }}</password>
         </server>
     </servers>
 </settings>
