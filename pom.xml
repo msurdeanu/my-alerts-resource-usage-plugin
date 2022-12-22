@@ -131,4 +131,18 @@
         </profile>
     </profiles>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>MyAlerts API Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/msurdeanu/my-alerts-api</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 </project>
