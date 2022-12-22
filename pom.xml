@@ -8,7 +8,38 @@
     <artifactId>myalerts-resource-usage-plugin</artifactId>
     <version>0.9.0-SNAPSHOT</version>
 
+    <scm>
+        <connection>scm:git:https://github.com/msurdeanu/my-alerts-resource-usage-plugin.git</connection>
+        <url>https://github.com/msurdeanu/my-alerts-resource-usage-plugin</url>
+        <developerConnection>scm:git:https://github.com/msurdeanu/my-alerts-resource-usage-plugin.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>MyAlerts Resource Usage Plugin Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/msurdeanu/my-alerts-resource-usage-plugin</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>MyAlerts API Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/msurdeanu/my-alerts-api</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <properties>
+        <project.scm.id>github</project.scm.id>
+
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
@@ -109,40 +140,17 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M7</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>github</id>
-            <activation>
-                <property>
-                    <name>useGitHubPackages</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <distributionManagement>
-                <repository>
-                    <id>github</id>
-                    <name>MyAlerts Resource Usage Plugin Apache Maven Packages</name>
-                    <url>https://maven.pkg.github.com/msurdeanu/my-alerts-resource-usage-plugin</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-    </profiles>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <name>MyAlerts API Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/msurdeanu/my-alerts-api</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>
