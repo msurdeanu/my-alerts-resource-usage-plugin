@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.myalerts</groupId>
     <artifactId>myalerts-resource-usage-plugin</artifactId>
-    <version>0.9.0-SNAPSHOT</version>
+    <version>0.9.0</version>
 
     <scm>
         <connection>scm:git:https://github.com/msurdeanu/my-alerts-resource-usage-plugin.git</connection>
         <url>https://github.com/msurdeanu/my-alerts-resource-usage-plugin</url>
         <developerConnection>scm:git:https://github.com/msurdeanu/my-alerts-resource-usage-plugin.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v0.9.0</tag>
     </scm>
 
     <distributionManagement>
@@ -47,7 +45,7 @@
         <plugin.class>org.myalerts.plugin.resourceusage.ResourceUsagePlugin</plugin.class>
         <plugin.version>0.9.0</plugin.version>
         <plugin.requires>0.9.0</plugin.requires>
-        <plugin.dependencies/>
+        <plugin.dependencies />
         <plugin.provider>https://myalerts.org</plugin.provider>
         <plugin.description>Shows memory and CPU usage inside statistics page</plugin.description>
         <plugin.license>Apache License 2.0</plugin.license>
@@ -83,8 +81,7 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <unzip src="target/${project.artifactId}-${project.version}.${project.packaging}"
-                                       dest="target/plugin-classes"/>
+                                <unzip src="target/${project.artifactId}-${project.version}.${project.packaging}" dest="target/plugin-classes" />
                             </target>
                         </configuration>
                         <goals>
