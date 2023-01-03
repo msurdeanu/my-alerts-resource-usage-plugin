@@ -4,13 +4,13 @@
 
     <groupId>org.myalerts</groupId>
     <artifactId>myalerts-resource-usage-plugin</artifactId>
-    <version>0.9.0</version>
+    <version>0.9.1-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:https://github.com/msurdeanu/my-alerts-resource-usage-plugin.git</connection>
         <url>https://github.com/msurdeanu/my-alerts-resource-usage-plugin</url>
         <developerConnection>scm:git:https://github.com/msurdeanu/my-alerts-resource-usage-plugin.git</developerConnection>
-        <tag>v0.9.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
