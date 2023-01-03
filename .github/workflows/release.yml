@@ -27,3 +27,9 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.DEPLOY_GITHUB_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
+
+      - name: Upload zip file
+        uses: actions/upload-artifact@v3
+        with:
+          name: zip-file
+          path: target/myalerts-resource-usage-plugin-*.zip
