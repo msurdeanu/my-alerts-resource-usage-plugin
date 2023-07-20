@@ -45,8 +45,8 @@
 
         <plugin.id>resource-usage</plugin.id>
         <plugin.class>org.myalerts.plugin.resourceusage.ResourceUsagePlugin</plugin.class>
-        <plugin.version>0.9.0</plugin.version>
-        <plugin.requires>0.9.0</plugin.requires>
+        <plugin.version>1.0.0</plugin.version>
+        <plugin.requires>1.0.0</plugin.requires>
         <plugin.dependencies/>
         <plugin.provider>https://myalerts.org</plugin.provider>
         <plugin.description>Shows memory and CPU usage inside statistics page</plugin.description>
